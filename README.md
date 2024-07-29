@@ -2,13 +2,15 @@
 
 ## Basic Todolist App made in Golang
 ### To build it:
-    ```
+   
+```
        git clone https://github.com/SyedAsadK/TaskList
     
        cd TaskList 
         
        go build ./cmd/todo
-    ```
+    
+```
     
 
 ## To run the app ./todo in same directory
