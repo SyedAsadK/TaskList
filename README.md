@@ -7,7 +7,9 @@
     
        cd TaskList 
         
-       go build ./cmd/todo```
+       go build ./cmd/todo
+    
+    ```
 
 ## To run the app ./todo in same directory
 
