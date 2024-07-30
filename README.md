@@ -1,13 +1,27 @@
 # TaskList
 
 ## Basic Todolist App made in Golang
-### To build it:
+## To Install it:
+### 1) Installing using Make
+```
+
+       git clone https://github.com/SyedAsadK/TaskList
+    
+       cd TaskList 
+
+       sudo make install
+
+```
+_sudo is important to install_
+
+### 2) Building it for portable install 
+
 ```
        git clone https://github.com/SyedAsadK/TaskList
     
        cd TaskList 
         
-       go build ./cmd/todo
+       make build
 
 ```
 
