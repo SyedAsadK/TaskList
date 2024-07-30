@@ -14,6 +14,8 @@
 ```
 _sudo is important to install_
 
+_use `TaskList` to use the app_ 
+
 ### 2) Building it for portable install 
 
 ```
@@ -25,7 +27,7 @@ _sudo is important to install_
 
 ```
 
-## To run the app ./todo in same directory
+ _To run the app if portable install use `./todo` in same directory_
 
 ## Usage of TaskList:
 
