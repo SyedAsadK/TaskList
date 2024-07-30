@@ -27,50 +27,35 @@ func main() {
 
 	Todo := &gotodo.Todos{}
 
-	if err := Todo.Load(todofile); err != nil {
-		fmt.Fprintln(os.Stderr, err.Error())
-		os.Exit(1)
-	}
+	err := Todo.Load(todofile)
+  Err(err)	
 
 	switch {
 
 	case *add:
     task,err := getInput(os.Stdin,flag.Args()...)
-    if err != nil{
-			fmt.Fprintln(os.Stderr, err.Error())
-			os.Exit(1)
-    }
+    Err(err)
+  
     Todo.Add(task)
 		err = Todo.Store(todofile)
-		if err != nil {
-			fmt.Fprintln(os.Stderr, err.Error())
-			os.Exit(1)
-		}
-
+    Err(err)
+	
 
 
 	case *done> 0:
 		err := Todo.Compelete(*done)
-		if err != nil {
-			fmt.Fprintln(os.Stderr, err.Error())
-			os.Exit(1)
-		}
+    Err(err)
+		
 		err = Todo.Store(todofile)
-		if err != nil {
-			fmt.Fprintln(os.Stderr, err.Error())
-			os.Exit(1)
-		}
+    Err(err)
+		
 	case *del> 0:
 		err := Todo.Delete(*del)
-		if err != nil {
-			fmt.Fprintln(os.Stderr, err.Error())
-			os.Exit(1)
-		}
+    Err(err)
+		
 		err = Todo.Store(todofile)
-		if err != nil {
-			fmt.Fprintln(os.Stderr, err.Error())
-			os.Exit(1)
-		}
+    Err(err)
+		
 	case *list:
 		Todo.Print()
 
@@ -101,4 +86,9 @@ func getInput(r io.Reader, args ...string) (string, error) {
   return text,nil
 
 }
-
+func Err(err error){
+		if err != nil {
+			fmt.Fprintln(os.Stderr, err.Error())
+			os.Exit(1)
+		}
+}

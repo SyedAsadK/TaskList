@@ -89,6 +89,7 @@ func (t *Todos) countPend() int {
     return count
 }
 
+
 func (t *Todos) Print() {
 	table := simpletable.New()
 	table.Header = &simpletable.Header{
