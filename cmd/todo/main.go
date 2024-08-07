@@ -21,6 +21,7 @@ func main() {
 	done := flag.Int("done", 0, "mark a task as completed")
 	del := flag.Int("del", 0, "deletes a task")
 	list := flag.Bool("list", false, "List all tasks")
+  delall := flag.Bool("delAll",false,"Delete all tasks") 
   
 
 	flag.Parse()
@@ -58,6 +59,9 @@ func main() {
 		
 	case *list:
 		Todo.Print()
+
+  case *delall:
+    Todo.DeleteAll(todofile)
 
 	default:
 		fmt.Fprintln(os.Stdout, "invalid command, type -h to see all commands")

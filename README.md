@@ -31,17 +31,26 @@ _use `TaskList` to use the app_
 
 ## Usage of TaskList:
 
-  ```
-  -add
-    	add a new task
-  -del int
-    	deletes a task
-  -done int
-    	mark a task as completed
-  -list
+  _-add_
+
+    	Add a new task
+
+  _-del int_
+
+    	Deletes a task
+
+ _-done int_
+
+    	Mark a task as completed
+
+  _-list_
+
     	List all tasks
 
- ```
+  _-delAll_
+
+        Deletes All the tasks
+
 
 ## Showcase
 ![Showcase](ss.png)

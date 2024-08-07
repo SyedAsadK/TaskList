@@ -48,6 +48,9 @@ func (t *Todos) Delete(index int) error {
 	return nil
 
 }
+func (t *Todos) DeleteAll(filename string) error{
+	return os.Remove(filename)
+}
 
 func (t *Todos) Load(filename string) error {
 	file, err := os.ReadFile(filename)
@@ -56,7 +59,6 @@ func (t *Todos) Load(filename string) error {
 			return nil
 		}
 		return err
-
 	}
 	if len(file) == 0 {
 		return err
