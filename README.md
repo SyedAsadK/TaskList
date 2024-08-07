@@ -16,7 +16,7 @@ _sudo is important to install_
 
 _use `TaskList` to use the app_ 
 
-### 2) Building it for portable install 
+### 2) Building it from source 
 
 ```
        git clone https://github.com/SyedAsadK/TaskList
